@@ -1,0 +1,70 @@
+$black                    : #000000;
+$off-black                : #222222;
+$gray-dark                : #555555;
+$gray                     : #999999;
+$gray-light               : #d3d3d3;
+$gray-lightest            : #f1f1f1;
+$white                    : #ffffff;
+
+
+body {
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
+}
+
+.container {
+	max-width: 1280px;
+	min-width: 300px;
+	margin: 0 auto;
+}
+
+.section-padding {
+	padding: 2em 0;
+}
+
+header {
+	color: $white;
+	padding: 1em 0;
+}
+
+
+
+// TYPOGRAPHY STACK -------------------------------------- //
+// ------------------------------------------------------- //
+
+
+h1 {
+	font-size: 3.815em;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 3.052em;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 2.441em;
+	font-weight: normal;
+}
+
+h4 {
+	font-size: 1.953em;
+}
+
+h5 {
+	font-size: 1.563em;
+}
+
+h6 {
+	font-size: 1.25em;
+}
+
+p {
+	font-size: 1em;
+}
+
+p.meta {
+	font-size: .8em;
+}
