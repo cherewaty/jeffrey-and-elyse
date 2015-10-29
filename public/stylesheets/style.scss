@@ -1,11 +1,22 @@
+// WEDDING COLORS ---------------------------------------- //
+// ------------------------------------------------------- //
+
+$midnight                 : rgb(13,33,52);
+$thesteps                 : rgb(99,195,204);
+$fern                     : rgb(155,183,52);
+$lime                     : rgb(193,210,15);
+$paloma                   : rgb(241,117,114);
+$mezcal                   : rgb(236,154,33);
+
 $black                    : #000000;
-$off-black                : #222222;
-$gray-dark                : #555555;
+$gray-dark                : #222222;
 $gray                     : #999999;
 $gray-light               : #d3d3d3;
-$gray-lightest            : #f1f1f1;
 $white                    : #ffffff;
 
+
+// GLOBAL ------------------------------------------------ //
+// ------------------------------------------------------- //
 
 body {
 	margin: 0;
@@ -17,52 +28,67 @@ body {
 	max-width: 1280px;
 	min-width: 300px;
 	margin: 0 auto;
-}
-
-.section-padding {
 	padding: 2em 0;
 }
-
-header {
-	color: $white;
-	padding: 1em 0;
-}
-
 
 
 // TYPOGRAPHY STACK -------------------------------------- //
 // ------------------------------------------------------- //
 
 
+// names and intro sentence
+// turquoise, typnic headline
 h1 {
 	font-size: 3.815em;
 	font-weight: normal;
+	font-family: "TypnicHeadline";
+	color: $thesteps;
 }
 
+// dates
+// paloma or spring blooms
+// days are typnic slab; "april" is headline
 h2 {
 	font-size: 3.052em;
 	font-weight: normal;
+	font-family: "TypnicHeadlineSlab";
+	color: $paloma;
 }
 
+// venues
+// paloma, typnic slab
 h3 {
 	font-size: 2.441em;
 	font-weight: normal;
+	font-family: "TypnicHeadlineSlab";
+	color: $paloma;
 }
 
+// url and location
+// fern, typnic slab
 h4 {
 	font-size: 1.953em;
+	font-family: "TypnicHeadlineSlab";
+	color: $fern;
 }
 
+// text headlines, turquoise or dark gray
+// font tbd
 h5 {
 	font-size: 1.563em;
+	color: $thesteps;
 }
 
+// text headlines, turquoise or dark gray
+// font tbd
 h6 {
 	font-size: 1.25em;
+	color: $gray-dark;
 }
 
 p {
 	font-size: 1em;
+	color: $gray-dark;
 }
 
 p.meta {

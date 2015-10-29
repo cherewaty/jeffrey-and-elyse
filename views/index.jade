@@ -1,8 +1,9 @@
 extends layout
 
 block content
-    .row
+    .container
         h1 Jeffrey and Elyse
+        img(src="/images/names.svg", alt="")
         p
         | invite you to join them in celebrating their love and commitment with a very Austin weekend
         button.button RSVP
@@ -37,7 +38,3 @@ block content
         h4 Footer
         p Footer illustration here—tiny succulent or Texas or something
 
-script(src='js/vendor/jquery.js')
-script(src='js/foundation.min.js')
-script
-    $(document).foundation();
