@@ -24,3 +24,7 @@ coverage
 
 # Benchmarking
 benchmarks/graphs
+
+# CSS
+public/stylesheets/*.css
+public/stylesheets/*.css.map
