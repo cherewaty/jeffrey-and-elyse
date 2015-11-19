@@ -84,6 +84,7 @@ h6 {
 
 p {
 	font-size: 1em;
+	line-height: 1.5;
 }
 
 hr {
@@ -172,3 +173,64 @@ header {}
 
 }
 
+
+
+// VENUE ---------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+
+.venue {
+
+	h4 {
+		margin-bottom: 0;
+	}
+
+	h5 {
+		margin: 0;
+		font-family: $typnic;
+		font-size: 80%;
+		color: $thesteps;
+	}
+
+	h6 {
+		color: $fern;
+		font-family: $typnic;
+		font-size: 120%;
+		margin-bottom: 0;
+	}
+
+	em {
+		color: $agave;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+}
+
+.dots {
+	background: url("/images/dots.png") repeat-x;
+	display: inline-block;
+	height: 10px;
+	min-width: 60vw;
+	vertical-align: 4px;
+}
+
+
+
+
+// RSVP ---------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+
+.rsvp {
+	h5 {
+		color: $paloma;
+	}
+}
+
+button {
+	background: $paloma;
+	color: $white;
+	border: none;
+	padding: 14px 30px;
+	font-family: $typnic;
+	letter-spacing: 1px;
+}
