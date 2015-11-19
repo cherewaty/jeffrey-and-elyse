@@ -162,17 +162,10 @@ nav {
 
 header {
 	@extend %clearfix;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: top;
-}
 
-.names {
-	// width: $full-width - $indent-three;
-	width: 700px;
-	flex: 1 0 auto;
-	margin: 0;
+	img {
+		max-width: 100%;
+	}
 }
 
 
