@@ -57,42 +57,6 @@ body {
 }
 
 
-// A KINDA GRID THING IDK ----------------------------------------------- //
-// ---------------------------------------------------------------------- //
-// it's probably too late at night to play with flexbox so this is gonna be ugly
-
-$full-width: 1200px;
-$indent-one: 1000px;
-$indent-two: 800px;
-$indent-three: 600px;
-
-.container {
-	// max-width: 1200px;
-	width: $full-width;
-	// border: 1px solid $paloma;
-	min-width: 300px;
-	margin: 0 auto;
-	// padding: 2em 4em;
-}
-
-.indent-one {
-	width: $indent-one;
-	margin-left: $full-width - $indent-one;
-}
-
-.indent-two {
-	width: $indent-two;
-	margin-left: $full-width - $indent-two;
-}
-
-.indent-three {
-	width: $indent-three;
-	margin-left: $full-width - $indent-three;
-}
-
-
-
-
 // TYPOGRAPHY STACK ----------------------------------------------------- //
 // ---------------------------------------------------------------------- //
 
@@ -101,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $typnic-slab;
 	font-weight: normal;
 	color: $midnight;
+	margin: 0;
 }
 
 h1 {
@@ -121,10 +86,19 @@ h3 {
 
 h4 {
 	font-size: 1.953em;
+	margin-bottom: 0;
 }
 
 h5 {
 	font-size: 1.563em;
+}
+
+
+h5 {
+	margin: 0;
+	font-family: $typnic;
+	font-size: 80%;
+	color: $thesteps;
 }
 
 h6 {
@@ -159,7 +133,7 @@ nav {
 	font-size:  .75em;
 
 	.nav-item {
-		margin-right: 5em;
+
 
 		span {
 			color: $paloma-light;
@@ -167,7 +141,7 @@ nav {
 		}
 	}
 
-	a
+	.nav-item,
 	a:active,
 	a:visited {
 		color: $paloma;
@@ -201,13 +175,6 @@ header {
 // HEADER DATE & LOCATION LOCKUP ---------------------------------------- //
 
 .date-location {
-	flex: 1 0 auto;
-	margin-top: 240px;
-
-	h2, h3 {
-		margin: 0;
-		line-height: 1;
-	}
 
 	// date
 	.day {
@@ -244,17 +211,6 @@ header {
 
 .venue {
 
-	h4 {
-		margin-bottom: 0;
-	}
-
-	h5 {
-		margin: 0;
-		font-family: $typnic;
-		font-size: 80%;
-		color: $thesteps;
-	}
-
 	h6 {
 		color: $fern;
 		font-family: $typnic;
@@ -274,6 +230,7 @@ header {
 	background: url("/images/dots.png") repeat-x;
 	display: inline-block;
 	height: 10px;
+	width: 100px;
 	min-width: 60vw;
 	vertical-align: 4px;
 }
@@ -300,21 +257,20 @@ button {
 }
 
 
-// PHOTO MOSIACS -------------------------------------------------------- //
-// ---------------------------------------------------------------------- //
-// lol how do u img
 
-.photo-mosiac-top {
-	background: url("/images/photo-mosiac-top.jpg") no-repeat 0 0;
-	background-size: 100%;
-	width: 100%;
-	min-height: 900px;
-	margin-top: -250px;
+
+.box-row {
+    margin-bottom: 1rem;
 }
-
-.photo-mosiac-bottom {
-	background: url("/images/photo-mosiac-bottom.jpg") no-repeat 0 0;
-	background-size: 100%;
-	width: 100%;
-	min-height: 900px;
+.box, .box-first, .box-large, .box-nested, .box-row {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 1rem;
+    margin-bottom: 0;
+    background: #007FFF;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
 }
