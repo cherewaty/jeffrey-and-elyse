@@ -27,25 +27,74 @@ $typnic-slab: "TypnicHeadlineSlab", $fallback;
 // GLOBAL --------------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
 
+* {
+	box-sizing: border-box;
+}
+
 body {
-	margin: 0;
+	margin: 50px 0 0 0;
 	font-family: "Sentinel", "Georgia", Helvetica, Arial, sans-serif;
 	font-size: 100%;
 	color: $midnight;
 	text-rendering: geometricPrecision;
 }
 
-.container {
-	max-width: 1200px;
-	border: 1px solid $paloma;
-	min-width: 300px;
-	margin: 0 auto;
-	padding: 2em 4em;
+// CLEARFIX ------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+// To force a parent element to contain its floated children.
+// Based off http://nicolasgallagher.com/micro-clearfix-hack/
+// To use: `@extend %clearfix;` on the parent of N number of floated elements, to contain them.
+
+%clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        display: table;
+        clear: both;
+        content: " ";
+    }
 }
 
 
-// TYPOGRAPHY STACK -------------------------------------- //
-// ------------------------------------------------------- //
+// A KINDA GRID THING IDK ----------------------------------------------- //
+// ---------------------------------------------------------------------- //
+// it's probably too late at night to play with flexbox so this is gonna be ugly
+
+$full-width: 1200px;
+$indent-one: 1000px;
+$indent-two: 800px;
+$indent-three: 600px;
+
+.container {
+	// max-width: 1200px;
+	width: $full-width;
+	// border: 1px solid $paloma;
+	min-width: 300px;
+	margin: 0 auto;
+	// padding: 2em 4em;
+}
+
+.indent-one {
+	width: $indent-one;
+	margin-left: $full-width - $indent-one;
+}
+
+.indent-two {
+	width: $indent-two;
+	margin-left: $full-width - $indent-two;
+}
+
+.indent-three {
+	width: $indent-three;
+	margin-left: $full-width - $indent-three;
+}
+
+
+
+
+// TYPOGRAPHY STACK ----------------------------------------------------- //
+// ---------------------------------------------------------------------- //
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -110,7 +159,7 @@ nav {
 	font-size:  .75em;
 
 	.nav-item {
-		margin-right: 9em;
+		margin-right: 5em;
 
 		span {
 			color: $paloma-light;
@@ -133,12 +182,26 @@ nav {
 // HEADER --------------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
 
-header {}
+header {
+	@extend %clearfix;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.names {
+	width: $full-width - $indent-three;
+	flex: 1 0 auto;
+	margin: 0;
+}
 
 
 // HEADER DATE & LOCATION LOCKUP ---------------------------------------- //
 
 .date-location {
+	flex: 1 0 auto;
+
 
 	h2, h3 {
 		margin: 0;
