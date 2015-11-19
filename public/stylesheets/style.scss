@@ -1,12 +1,15 @@
-// WEDDING COLORS ---------------------------------------- //
-// ------------------------------------------------------- //
+// WEDDING COLORS ------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
 
-$midnight                 : rgb(13,33,52);
-$thesteps                 : rgb(99,195,204);
-$fern                     : rgb(155,183,52);
-$lime                     : rgb(193,210,15);
-$paloma                   : rgb(241,117,114);
+$midnight                 : rgb(15,53,86);
+$thesteps                 : rgb(132,207,205);
+$agave                    : rgb(91,185,182);
+$fern                     : rgb(158,174,80);
+$lime                     : rgb(193,210,1);
+$paloma                   : rgb(243,121,119); // 236,95,86 - darker version
+$paloma-light             : lighten($paloma,10%);
 $mezcal                   : rgb(236,154,33);
+$sunshine                 : rgb(254,198,52);
 
 $black                    : #000000;
 $gray-dark                : #222222;
@@ -14,26 +17,30 @@ $gray                     : #999999;
 $gray-light               : #d3d3d3;
 $white                    : #ffffff;
 
+$fallback: "Georgia", Helvetica, Arial, sans-serif;
 
-// GLOBAL ------------------------------------------------ //
-// ------------------------------------------------------- //
+$sentinel: "Sentinel", $fallback;
+$typnic: "TypnicHeadline", $fallback;
+$typnic-slab: "TypnicHeadlineSlab", $fallback;
+
+
+// GLOBAL --------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
 
 body {
 	margin: 0;
 	font-family: "Sentinel", "Georgia", Helvetica, Arial, sans-serif;
 	font-size: 100%;
-	color: $gray-dark;
+	color: $midnight;
+	text-rendering: geometricPrecision;
 }
 
 .container {
-	max-width: 1280px;
+	max-width: 1200px;
+	border: 1px solid $paloma;
 	min-width: 300px;
 	margin: 0 auto;
 	padding: 2em 4em;
-}
-
-.main {
-	width: 80%;
 }
 
 
@@ -41,86 +48,42 @@ body {
 // ------------------------------------------------------- //
 
 
-// names and intro sentence
-// turquoise, typnic headline
+h1, h2, h3, h4, h5, h6 {
+	font-family: $typnic-slab;
+	font-weight: normal;
+	color: $midnight;
+}
+
 h1 {
 	font-size: 3.815em;
-	font-weight: normal;
-	font-family: "TypnicHeadline";
-	color: $thesteps;
 }
 
-// dates
-// paloma or spring blooms
-// days are typnic slab; "april" is headline
+
 h2 {
-	font-size: 3.052em;
-	font-weight: normal;
-	font-family: "TypnicHeadlineSlab";
-	color: $paloma;
-}
-
-// venues
-// paloma, typnic slab
-h3 {
+	// font-size: 3.052em;
 	font-size: 2.441em;
-	font-weight: normal;
-	font-family: "TypnicHeadlineSlab";
-	color: $paloma;
 }
 
-// url and location
-// fern, typnic slab
+
+h3 {
+	font-size: 1.953em;
+}
+
+
 h4 {
 	font-size: 1.953em;
-	font-weight: normal;
-	color: $paloma;
-	font-family: "TypnicHeadlineSlab";
-	margin-bottom: 0;
-	span {
-		font-family: "TypnicHeadline";
-	}
-	// color: $fern;
 }
 
-// text headlines, turquoise or dark gray
-// font tbd
 h5 {
 	font-size: 1.563em;
-	font-weight: normal;
-	font-family: "TypnicHeadline";
-	color: $thesteps;
-	margin-bottom: 0;
 }
 
-// text headlines, turquoise or dark gray
-// font tbd
 h6 {
-	font-weight: normal;
 	font-size: 1.25em;
-	color: $gray-dark;
-	margin: 0;
-}
-
-h6.address {
-	font-weight: normal;
-	font-family: "TypnicHeadline";
-	letter-spacing: 1.2px;
-	font-size: .8em;
-}
-
-.address {
-	color: $fern;
 }
 
 p {
 	font-size: 1em;
-}
-
-p.meta {
-	font-size: .8em;
-	font-style: italic;
-	color: $gray;
 }
 
 hr {
@@ -129,57 +92,83 @@ hr {
 	border: 0;
 }
 
-
-// HEADER ------------------------------------------------ //
-// ------------------------------------------------------- //
-
-header {
-	min-height: 710px;
+a,
+a:active,
+a:visited,
+a:hover,
+a:focus {
+	text-decoration: none;
 }
 
-.hero {
-	height: 710px;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-	top: 0;
-	background:
-		linear-gradient(to right, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 50%),
-		url('/images/us-at-josh-wedding.jpg') no-repeat 0 -150px;
-	background-size: 100%, 105%;
-	-webkit-filter: sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);
-}
+// NAV --------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
 
-.names {
-	width: 50%;
-	margin-top: 50px;
-}
+nav {
+	font-family: $typnic;
+	font-weight: normal;
+	font-size:  .75em;
 
+	.nav-item {
+		margin-right: 9em;
 
-// MAIN -------------------------------------------------- //
-// ------------------------------------------------------- //
-
-.invite {
-	margin: 6em 0;
-	text-align: center;
-}
-
-.dots {
-	width: 50%;
-	margin: 0 auto;
-	margin-top: 4em;
-}
-
-
-.details {
-	text-align: center;
-	// color: $paloma;
-
-	p {
-		font-style: italic;
+		span {
+			color: $paloma-light;
+			font-family: $typnic-slab;
+		}
 	}
 
-	ul {
-		list-style-type: none;
+	a
+	a:active,
+	a:visited {
+		color: $paloma;
+	}
+	a:hover,
+	a:focus {
+		color: $sunshine;
 	}
 }
+
+
+// HEADER --------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+
+header {}
+
+
+// HEADER DATE & LOCATION LOCKUP ---------------------------------------- //
+
+.date-location {
+
+	h2, h3 {
+		margin: 0;
+		line-height: 1;
+	}
+
+	// date
+	.day {
+		font-family: $typnic;
+		color: $thesteps;
+	}
+
+	// date
+	.date {
+		font-family: $typnic-slab;
+		color: $agave;
+	}
+
+	// location
+	.location {
+		font-family: $typnic;
+		color: $fern;
+
+		.downtown {
+			font-family: $sentinel;
+			font-weight: bold;
+			font-style: italic;
+			color: $lime;
+		}
+
+	}
+
+}
+
