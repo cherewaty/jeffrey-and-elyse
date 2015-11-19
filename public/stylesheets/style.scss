@@ -39,6 +39,10 @@ body {
 	text-rendering: geometricPrecision;
 }
 
+section {
+	margin-bottom: 6em;
+}
+
 // CLEARFIX ------------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
 // To force a parent element to contain its floated children.
@@ -130,7 +134,7 @@ a:focus {
 nav {
 	font-family: $typnic;
 	font-weight: normal;
-	font-size:  .75em;
+	font-size: .75em;
 
 	.nav-item {
 
