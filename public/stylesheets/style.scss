@@ -187,11 +187,12 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+	align-items: top;
 }
 
 .names {
-	width: $full-width - $indent-three;
+	// width: $full-width - $indent-three;
+	width: 700px;
 	flex: 1 0 auto;
 	margin: 0;
 }
@@ -201,7 +202,7 @@ header {
 
 .date-location {
 	flex: 1 0 auto;
-
+	margin-top: 240px;
 
 	h2, h3 {
 		margin: 0;
@@ -296,4 +297,24 @@ button {
 	padding: 14px 30px;
 	font-family: $typnic;
 	letter-spacing: 1px;
+}
+
+
+// PHOTO MOSIACS -------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+// lol how do u img
+
+.photo-mosiac-top {
+	background: url("/images/photo-mosiac-top.jpg") no-repeat 0 0;
+	background-size: 100%;
+	width: 100%;
+	min-height: 900px;
+	margin-top: -250px;
+}
+
+.photo-mosiac-bottom {
+	background: url("/images/photo-mosiac-bottom.jpg") no-repeat 0 0;
+	background-size: 100%;
+	width: 100%;
+	min-height: 900px;
 }
