@@ -273,6 +273,18 @@ button {
 }
 
 
+.photo-mosiac-top {
+	// margin-top: -200px;
+
+	// .photo:nth-child(1),
+	// .photo:nth-child(3) {
+	// 	padding-top: 200px;
+	// 	background: transparent;
+	// }
+	// .photo:nth-child(3) {
+	// 	padding-top: 430px;
+	// }
+}
 
 .photo-mosiac {
    -webkit-column-count: 5;
@@ -281,7 +293,6 @@ button {
    -moz-column-gap:      20px;
    column-count:         5;
    column-gap:           20px;
-   padding-bottom: 30px;
 
 	.photo {
 		background: darken($midnight,10%);
