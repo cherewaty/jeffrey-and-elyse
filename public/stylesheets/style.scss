@@ -271,21 +271,9 @@ button {
     color: #fff;
 }
 
-
-.photo-mosiac-top {
-    margin-top: -120px;
-
-    .photo:nth-child(1),
-    .photo:nth-child(3) {
-     padding-top: 200px;
-     background: transparent;
-    }
-    .photo:nth-child(3) {
-     padding-top: 430px;
-    }
-}
-
 .photo-mosiac {
+	margin: 40px 0 100px;
+
    -webkit-column-count: 5;
    -webkit-column-gap:   20px;
    -moz-column-count:    5;
