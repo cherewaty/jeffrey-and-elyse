@@ -1,0 +1,26 @@
+
+// RSVP ---------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+
+.rsvp {
+    h5 {
+        color: $paloma;
+    }
+}
+
+button {
+    background: $paloma;
+    color: $white;
+    border: none;
+    padding: 14px 30px;
+    font-family: $typnic;
+    letter-spacing: 1px;
+    transition: .5s ease background;
+    cursor: pointer;
+
+    &:hover {
+        background: $mezcal;
+    }
+}
+
+

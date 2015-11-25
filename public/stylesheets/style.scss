@@ -81,11 +81,17 @@ h1 {
 
 h2 {
 	font-size: 2.441em;
+    @media screen and (max-width: 768px) {
+        font-size: 120%;
+    }
 }
 
 
 h3 {
 	font-size: 1.953em;
+    @media screen and (max-width: 768px) {
+        font-size: 120%;
+    }
 }
 
 
@@ -144,8 +150,6 @@ nav {
     margin-top: 3em;
 
 	.nav-item {
-
-
 		span {
 			color: $paloma-light;
 			font-family: $typnic-slab;
@@ -173,6 +177,44 @@ header {
 	img {
 		max-width: 100%;
 	}
+}
+
+.names {
+    margin-bottom: .5em;
+}
+
+
+.zig {
+    width: 35px;
+    margin-right: -6px;
+    vertical-align: 6px;
+}
+.texas {
+    width: 20px;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .names img {max-width: 50%;}
+}
+
+@media screen and (max-width: 768px) {
+    .names, .info {
+        border: 1px solid red;
+        display: block;
+        text-align: center;
+        max-width: 100% !important;
+        flex-basis: 100% !important;
+    }
+    .zig {
+        vertical-align: 3px;
+        width: 25px;
+        margin-right: 0;
+    }
+    .texas {
+        width: 15px;
+        vertical-align: -2px;
+    }
 }
 
 
@@ -231,7 +273,6 @@ header {
 	}
 
     img {
-        margin-bottom: 1.5em;
         max-width: 100%;
     }
 
@@ -275,48 +316,9 @@ header {
 }
 
 
-// RSVP ---------------------------------------------------------------- //
+
+// PHOTO STUFF ---------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
-
-.rsvp {
-	h5 {
-		color: $paloma;
-	}
-}
-
-button {
-	background: $paloma;
-	color: $white;
-	border: none;
-	padding: 14px 30px;
-	font-family: $typnic;
-	letter-spacing: 1px;
-    transition: .5s ease background;
-    cursor: pointer;
-
-    &:hover {
-        background: $mezcal;
-    }
-}
-
-
-
-
-.box-row {
-    margin-bottom: 1rem;
-}
-.box, .box-first, .box-large, .box-nested, .box-row {
-    position: relative;
-    box-sizing: border-box;
-    min-height: 1rem;
-    margin-bottom: 0;
-    background: #007FFF;
-    border: 1px solid #FFF;
-    border-radius: 2px;
-    overflow: hidden;
-    text-align: center;
-    color: #fff;
-}
 
 .photo-mosiac {
 	margin: 40px 0 100px;
@@ -327,20 +329,6 @@ button {
    -moz-column-gap:      20px;
    column-count:         5;
    column-gap:           20px;
-
-    .photo {
-        background: darken($midnight,10%);
-        margin-bottom: 20px;
-
-        img {
-            -webkit-filter: contrast(100%) saturate(90%);
-            mix-blend-mode: screen;
-            -webkit-backface-visibility: hidden; // magic bug
-
-            width: 100.5%; // yay subpixel rendering
-            height: auto;
-        }
-    }
 
     @media (max-width: 1200px) {
         -moz-column-count:    4;
@@ -365,4 +353,19 @@ button {
         column-count:         1;
     }
 
+}
+
+
+.photo {
+    background: darken($midnight,10%);
+    margin-bottom: 20px;
+
+    img {
+        -webkit-filter: contrast(100%) saturate(90%);
+        mix-blend-mode: screen;
+        -webkit-backface-visibility: hidden; // magic bug
+
+        width: 100.5%; // yay subpixel rendering
+        height: auto;
+    }
 }
