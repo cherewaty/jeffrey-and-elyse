@@ -34,7 +34,7 @@ $typnic-slab: "TypnicHeadlineSlab", $fallback;
 }
 
 body {
-	margin: 50px 0 0 0;
+	margin: 0;
 	font-family: "Sentinel", "Georgia", Helvetica, Arial, sans-serif;
 	font-size: 100%;
 	color: $midnight;
@@ -141,6 +141,7 @@ nav {
 	font-family: $typnic;
 	font-weight: normal;
 	font-size: .75em;
+    margin-top: 3em;
 
 	.nav-item {
 
