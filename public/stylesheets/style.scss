@@ -93,6 +93,10 @@ h4 {
 	font-size: 1.953em;
 	margin-bottom: .125em;
     background: url('/images/dots.png') repeat-x 0 50%;
+    @media screen and (max-width: 340px) {
+        background: none;
+    }
+
     span {
         background: white;
         padding-right: 7px;
@@ -241,15 +245,33 @@ header {
     margin-bottom: 2em;
 }
 
-.dots {
-	background: url("/images/dots.png") repeat-x;
-	display: inline-block;
-	height: 10px;
-	width: 100px;
-	vertical-align: 4px;
+
+// WHERE TO STAY -------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+
+.stay {}
+
+.hotels {
+
+    .hotel-option {
+        margin-bottom: 2em;
+    }
+
+    h5 {
+        a,
+        a:active,
+        a:visited {
+            color: $fern;
+        }
+    }
+    em {
+        color: $lime;
+        display: block;
+        margin-top: .25em;
+        font-weight: bold;
+        font-style: italic;
+    }
 }
-
-
 
 
 // RSVP ---------------------------------------------------------------- //
