@@ -80,7 +80,6 @@ h1 {
 
 
 h2 {
-	// font-size: 3.052em;
 	font-size: 2.441em;
 }
 
@@ -92,23 +91,24 @@ h3 {
 
 h4 {
 	font-size: 1.953em;
-	margin-bottom: 0;
+	margin-bottom: .125em;
+    background: url('/images/dots.png') repeat-x 0 50%;
+    span {
+        background: white;
+        padding-right: 7px;
+    }
 }
 
 h5 {
-	font-size: 1.563em;
-}
-
-
-h5 {
-	margin: 0;
-	font-family: $typnic;
-	font-size: 80%;
-	color: $thesteps;
+	font-size: 1.25em;
+    font-family: $typnic;
 }
 
 h6 {
-	font-size: 1.25em;
+    margin-bottom: 1em;
+    font-family: $typnic;
+    font-size: 80%;
+    color: $thesteps;
 }
 
 p {
@@ -210,19 +210,35 @@ header {
 
 .venue {
 
-	h6 {
+	.address {
 		color: $fern;
 		font-family: $typnic;
 		font-size: 120%;
 		margin-bottom: 0;
 	}
 
-	em {
+	.doors {
+        display: block;
+        margin-top: .25em;
 		color: $agave;
 		font-weight: bold;
 		font-style: italic;
 	}
 
+    img {
+        margin-bottom: 1.5em;
+        max-width: 100%;
+    }
+
+}
+
+.venue-photos {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.venue-address {
+    margin-bottom: 2em;
 }
 
 .dots {
@@ -252,6 +268,12 @@ button {
 	padding: 14px 30px;
 	font-family: $typnic;
 	letter-spacing: 1px;
+    transition: .5s ease background;
+    cursor: pointer;
+
+    &:hover {
+        background: $mezcal;
+    }
 }
 
 
