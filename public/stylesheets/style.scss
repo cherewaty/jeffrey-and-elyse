@@ -200,7 +200,6 @@ header {
 
 @media screen and (max-width: 768px) {
     .names, .info {
-        border: 1px solid red;
         display: block;
         text-align: center;
         max-width: 100% !important;
@@ -368,4 +367,19 @@ header {
         width: 100.5%; // yay subpixel rendering
         height: auto;
     }
+}
+
+
+// ABOUT US ------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+
+.about-us-callout {
+    color: $thesteps;
+    font-size: 220%;
+    font-style: italic;
+}
+
+.engagement-photo img {
+    max-width: 100%;
+    margin: 2em 0 1em;
 }
