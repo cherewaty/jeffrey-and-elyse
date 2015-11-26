@@ -1,3 +1,4 @@
+@import 'fonts';
 @import 'flexboxgrid';
 
 // WEDDING COLORS ------------------------------------------------------- //
@@ -22,8 +23,8 @@ $white                    : #ffffff;
 $fallback: "Georgia", Helvetica, Arial, sans-serif;
 
 $sentinel: "Sentinel", $fallback;
-$typnic: "TypnicHeadline", $fallback;
-$typnic-slab: "TypnicHeadlineSlab", $fallback;
+$typnic: "typnic-sans", $fallback;
+$typnic-slab: "typnic-slab", $fallback;
 
 
 // GLOBAL --------------------------------------------------------------- //
