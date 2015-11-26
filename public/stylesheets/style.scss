@@ -22,7 +22,7 @@ $white                    : #ffffff;
 
 $fallback: "Georgia", Helvetica, Arial, sans-serif;
 
-$sentinel: "Sentinel", $fallback;
+// $sentinel: "Sentinel", $fallback;
 $typnic: "typnic-sans", $fallback;
 $typnic-slab: "typnic-slab", $fallback;
 
@@ -36,7 +36,7 @@ $typnic-slab: "typnic-slab", $fallback;
 
 body {
 	margin: 0;
-	font-family: "Sentinel", "Georgia", Helvetica, Arial, sans-serif;
+	font-family: $fallback;
 	font-size: 100%;
 	color: $midnight;
 	text-rendering: geometricPrecision;
@@ -243,7 +243,7 @@ header {
 		color: $fern;
 
 		.downtown {
-			font-family: $sentinel;
+			font-family: $fallback;
 			font-weight: bold;
 			font-style: italic;
 			color: $lime;
