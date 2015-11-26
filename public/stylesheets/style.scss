@@ -43,7 +43,7 @@ body {
 }
 
 section {
-	margin-bottom: 8em;
+	margin-bottom: 10em;
 }
 
 // CLEARFIX ------------------------------------------------------------- //
@@ -284,7 +284,7 @@ header {
 }
 
 .venue-address {
-    margin-bottom: 2em;
+    margin: 4em 0 2em;
 }
 
 
@@ -305,7 +305,12 @@ header {
         a:visited {
             color: $fern;
         }
+        a:hover,
+        a:focus {
+            color: $mezcal;
+        }
     }
+
     em {
         color: $lime;
         display: block;
@@ -321,7 +326,7 @@ header {
 // ---------------------------------------------------------------------- //
 
 .photo-mosiac {
-	margin: 40px 0 100px;
+	margin-top: 40px;
 
    -webkit-column-count: 5;
    -webkit-column-gap:   20px;
