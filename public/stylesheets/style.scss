@@ -40,6 +40,7 @@ body {
 	font-size: 100%;
 	color: $midnight;
 	text-rendering: geometricPrecision;
+    border-bottom: 20px solid $paloma;
 }
 
 section {
@@ -189,10 +190,11 @@ header {
 .zig {
     width: 35px;
     margin-right: -6px;
-    vertical-align: 6px;
+    vertical-align: 4px;
 }
 .texas {
     width: 20px;
+    vertical-align: -2px;
 }
 
 
@@ -245,6 +247,7 @@ header {
 			font-weight: bold;
 			font-style: italic;
 			color: $lime;
+            font-size: 85%;
 		}
 
 	}
