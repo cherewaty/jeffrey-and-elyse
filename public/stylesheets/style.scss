@@ -370,7 +370,8 @@ header {
     margin-bottom: 20px;
 
     img {
-        -webkit-filter: contrast(100%) saturate(90%);
+        -webkit-filter: contrast(100%) saturate(110%);
+        filter: contrast(100%) saturate(90%);
         mix-blend-mode: screen;
         -webkit-backface-visibility: hidden; // magic bug
 
@@ -385,7 +386,7 @@ header {
 
 .about-us-callout {
     color: $thesteps;
-    font-size: 220%;
+    font-size: 180%;
     font-style: italic;
 }
 
