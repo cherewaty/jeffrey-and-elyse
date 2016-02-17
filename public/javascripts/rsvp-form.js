@@ -16,8 +16,8 @@ $(function() {
     }
 
     if(errors.length === 0) {
-      $('#submit').addClass('loading').attr('disabled', true);
-      $(this).unbind('submit').submit();
+      $('#rsvp-submit').addClass('loading').attr('disabled', true);
+      $('#rsvp-form').off('submit').submit();
     }
   });
 });
