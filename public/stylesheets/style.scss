@@ -147,6 +147,40 @@ a:focus {
 	text-decoration: none;
 }
 
+
+button {
+	background: $fern;
+	color: $white;
+	padding: 10px 20px;
+	border: none;
+
+	display: inline-block;
+	width: 9em;
+
+	font-family: $typnic;
+	font-size: 1.25em;
+	text-align: center;
+	text-decoration: none;
+
+	cursor: pointer;
+	appearance: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	transition: .5s ease background-color, .5s ease border-color, .5s ease color;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: $mezcal;
+		color: $white;
+	}
+}
+
+.rsvp {
+	margin-top: 3em;
+}
+
 // NAV --------------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
 
@@ -343,7 +377,12 @@ header {
 // PHOTO STUFF ---------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
 
-.photo-mosiac {
+.photo-mosiac-bottom {
+	margin-bottom: 4em;
+}
+
+.photo-mosiac-top,
+.photo-mosiac-bottom {
 	margin-top: 40px;
 
    -webkit-column-count: 5;
@@ -377,7 +416,6 @@ header {
 	}
 
 }
-
 
 .photo {
 	background: darken($midnight,10%);
