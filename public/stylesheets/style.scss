@@ -149,6 +149,7 @@ a:focus {
 
 
 button,
+.button,
 input[type="submit"] {
 	background: $fern;
 	color: $white;
@@ -468,6 +469,13 @@ header {
 	label {
 		font-family: $typnic-slab;
 		color: $midnight;
+	}
+
+	.error label {
+		color: $paloma;
+	}
+	.error input {
+		border-color: $paloma;
 	}
 
 }
