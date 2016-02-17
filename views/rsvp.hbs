@@ -1,32 +1,41 @@
-<div class="rsvp-error-message">{{message}}</div>
+<div class="row middle-xs center-xs rsvp-header">
+	<div class="col-xs-6">
+		<h1>RSVP</h1>
+		<h6>by March 20, por favor</h6>
+	</div>
+</div>
 
-<h1>RSVP</h1>
-<h2>By March 20, por favor</h2>
-<div class="content">
-  <form action="/rsvp" method="post">
-    <p>
-      <label><input type="radio" name="coming" value="yes"> Wouldn't miss it!</label>
-    </p>
-    <p>
-      <label><input type="radio" name="coming" value="no"> Regretfully decline</label>
-    </p>
-    <p>
-      <label for="name">Names</label>
-      <br>
-      <input name="names" type="text" value="" id="names">
-    </p>
-    <p>
-      <label for "email">Email Address</label>
-      <br>
-      <input name="email" type="email" value="" id="email">
-    </p>
-    <p>
-      <label for "comments">Comments</label>
-      <br>
-      <textarea name="comments" cols="40" rows="10" id="comments"></textarea>
-    </p>
-    <p>
-      <input type="submit" type="submit" value="Send" id="submit">
-    </p>
-  </form>
+
+<div class="row middle-xs center-xs">
+	<div class="col-xs-6">
+
+		<div class="rsvp-error-message">{{message}}</div>
+
+		<div class="content rsvp-content">
+		  <form action="/rsvp" method="post">
+			 <p>
+				  <label for="name">Names</label>
+				  <br>
+				  <input name="names" type="text" value="" id="names">
+			</p>
+
+			<p>
+			  <label><input type="radio" name="coming" value="yes"> Wouldn't miss it!</label>
+			</p>
+			<p>
+			  <label><input type="radio" name="coming" value="no"> Regretfully decline</label>
+			</p>
+
+			<p>
+			  <label for "comments">Comments</label>
+			  <br>
+			  <textarea name="comments" cols="40" rows="10" id="comments"></textarea>
+			</p>
+			<p>
+			  <input type="submit" type="submit" value="Send RSVP" id="submit">
+			</p>
+		  </form>
+		</div>
+
+	</div>
 </div>

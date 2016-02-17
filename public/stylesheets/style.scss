@@ -148,7 +148,8 @@ a:focus {
 }
 
 
-button {
+button,
+input[type="submit"] {
 	background: $fern;
 	color: $white;
 	padding: 10px 20px;
@@ -177,9 +178,6 @@ button {
 	}
 }
 
-.rsvp {
-	margin-top: 3em;
-}
 
 // NAV --------------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
@@ -230,6 +228,7 @@ header {
 	margin-right: -6px;
 	vertical-align: 4px;
 }
+
 .texas {
 	width: 20px;
 	vertical-align: -2px;
@@ -445,4 +444,51 @@ header {
 .engagement-photo img {
 	max-width: 100%;
 	margin: 2em 0 1em;
+}
+
+
+
+// RSVP ----------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+
+// rsvp button on homepage
+.rsvp {
+	margin-top: 3em;
+}
+
+
+// RSVP PAGE
+.rsvp-header,
+.rsvp-success {
+	margin: 4em 0 2em;
+}
+
+.rsvp-content {
+
+	label {
+		font-family: $typnic-slab;
+		color: $midnight;
+	}
+
+}
+
+
+%input-base-styles {
+	display: block;
+	width: 100%;
+	padding: 0.5em;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+textarea,
+input[type="text"] {
+	@extend %input-base-styles;
+}
+
+
+.rsvp-success p {
+	padding-bottom: 25px;
+	background: url("/images/zig.png") repeat-x bottom left;
+	background-size: 5%;
 }
