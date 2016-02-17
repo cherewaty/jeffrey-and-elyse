@@ -466,6 +466,10 @@ header {
 
 .rsvp-content {
 
+	p {
+		margin-bottom: 2em;
+	}
+
 	label {
 		font-family: $typnic-slab;
 		color: $midnight;
@@ -476,6 +480,10 @@ header {
 	}
 	.error input {
 		border-color: $paloma;
+	}
+
+	.loading {
+
 	}
 
 }
