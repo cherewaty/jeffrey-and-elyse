@@ -5,8 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
-
-var routes = require('./routes/index');
+var nodemailer = require('nodemailer');
 
 var app = express();
 
@@ -31,7 +30,40 @@ app.use(require('node-sass-middleware')({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+app.get('/', function(req, res) {
+  res.render('index', { title: 'Jeffrey and Elyse' });
+});
 
+app.get('/rsvp', function(req, res) {
+  res.render('rsvp', { title: 'RSVP to Jeffrey and Elyse' });
+});
+
+app.post('/rsvp', function (req, res) {
+  var mailOptions, smtpTransport;
+
+  smtpTransport = nodemailer.createTransport('SMTP', {
+    service: 'gmail',
+    auth: {
+      user: 'jcherewaty@gmail.com',
+      pass: 'gnylocncmrdhmzsa'
+    }
+  });
+
+  mailOptions = {
+    from: req.body.names + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
+    to: 'rsvp@jeffreyandelyse.com',
+    subject: 'RSVP',
+    text: req.body.names + '\n' + req.body.email + '\n' + req.body.coming + '\n' + req.body.comments
+  };
+
+  smtpTransport.sendMail(mailOptions, function (error, response) {
+    if (error) {
+      res.render('rsvp', { title: 'RSVP to Jeffrey and Elyse', message: 'Error occured, RSVP not sent.', error: true, page: 'rsvp' })
+    }
+    else {
+      res.render('rsvp-success', { title: 'RSVP Sent' })
+    }
+  });
+});
 
 module.exports = app;
