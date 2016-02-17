@@ -40,7 +40,7 @@ body {
 	font-size: 100%;
 	color: $midnight;
 	text-rendering: geometricPrecision;
-    border-bottom: 20px solid $paloma;
+	border-bottom: 20px solid $paloma;
 }
 
 section {
@@ -59,14 +59,14 @@ a {
 // To use: `@extend %clearfix;` on the parent of N number of floated elements, to contain them.
 
 %clearfix {
-    *zoom: 1;
+	*zoom: 1;
 
-    &:before,
-    &:after {
-        display: table;
-        clear: both;
-        content: " ";
-    }
+	&:before,
+	&:after {
+		display: table;
+		clear: both;
+		content: " ";
+	}
 }
 
 
@@ -88,44 +88,44 @@ h1 {
 
 h2 {
 	font-size: 2.441em;
-    @media screen and (max-width: 768px) {
-        font-size: 120%;
-    }
+	@media screen and (max-width: 768px) {
+		font-size: 120%;
+	}
 }
 
 
 h3 {
 	font-size: 1.953em;
-    @media screen and (max-width: 768px) {
-        font-size: 120%;
-    }
+	@media screen and (max-width: 768px) {
+		font-size: 120%;
+	}
 }
 
 
 h4 {
 	font-size: 1.953em;
 	margin-bottom: .125em;
-    background: url('/images/dots.png') repeat-x 0 50%;
-    @media screen and (max-width: 340px) {
-        background: none;
-    }
+	background: url('/images/dots.png') repeat-x 0 50%;
+	@media screen and (max-width: 340px) {
+		background: none;
+	}
 
-    span {
-        background: white;
-        padding-right: 7px;
-    }
+	span {
+		background: white;
+		padding-right: 7px;
+	}
 }
 
 h5 {
 	font-size: 1.25em;
-    font-family: $typnic;
+	font-family: $typnic;
 }
 
 h6 {
-    margin-bottom: 1em;
-    font-family: $typnic;
-    font-size: 80%;
-    color: $thesteps;
+	margin-bottom: 1em;
+	font-family: $typnic;
+	font-size: 80%;
+	color: $thesteps;
 }
 
 p {
@@ -154,7 +154,7 @@ nav {
 	font-family: $typnic;
 	font-weight: normal;
 	font-size: .75em;
-    margin-top: 3em;
+	margin-top: 3em;
 
 	.nav-item {
 		span {
@@ -187,41 +187,41 @@ header {
 }
 
 .names {
-    margin-bottom: .5em;
+	margin-bottom: .5em;
 }
 
 
 .zig {
-    width: 35px;
-    margin-right: -6px;
-    vertical-align: 4px;
+	width: 35px;
+	margin-right: -6px;
+	vertical-align: 4px;
 }
 .texas {
-    width: 20px;
-    vertical-align: -2px;
+	width: 20px;
+	vertical-align: -2px;
 }
 
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
-    .names img {max-width: 50%;}
+	.names img {max-width: 50%;}
 }
 
 @media screen and (max-width: 768px) {
-    .names, .info {
-        display: block;
-        text-align: center;
-        max-width: 100% !important;
-        flex-basis: 100% !important;
-    }
-    .zig {
-        vertical-align: 3px;
-        width: 25px;
-        margin-right: 0;
-    }
-    .texas {
-        width: 15px;
-        vertical-align: -2px;
-    }
+	.names, .info {
+		display: block;
+		text-align: center;
+		max-width: 100% !important;
+		flex-basis: 100% !important;
+	}
+	.zig {
+		vertical-align: 3px;
+		width: 25px;
+		margin-right: 0;
+	}
+	.texas {
+		width: 15px;
+		vertical-align: -2px;
+	}
 }
 
 
@@ -251,7 +251,7 @@ header {
 			font-weight: bold;
 			font-style: italic;
 			color: $lime;
-            font-size: 85%;
+			font-size: 85%;
 		}
 
 	}
@@ -273,26 +273,26 @@ header {
 	}
 
 	.doors {
-        display: block;
-        margin-top: .25em;
+		display: block;
+		margin-top: .25em;
 		color: $agave;
 		font-weight: bold;
 		font-style: italic;
 	}
 
-    img {
-        max-width: 100%;
-    }
+	img {
+		max-width: 100%;
+	}
 
 }
 
 .venue-photos {
-    margin-top: 2em;
-    margin-bottom: 2em;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 .venue-address {
-    margin: 4em 0 2em;
+	margin: 4em 0 2em;
 }
 
 
@@ -303,29 +303,39 @@ header {
 
 .hotels {
 
-    .hotel-option {
-        margin-bottom: 2em;
-    }
+	.hotel-option {
+		margin-bottom: 2em;
+	}
 
-    h5 {
-        a,
-        a:active,
-        a:visited {
-            color: $fern;
-        }
-        a:hover,
-        a:focus {
-            color: $mezcal;
-        }
-    }
+	h5 {
+		a,
+		a:active,
+		a:visited {
+			color: $fern;
+		}
+		a:hover,
+		a:focus {
+			color: $mezcal;
+		}
+	}
 
-    em {
-        color: $lime;
-        display: block;
-        margin-top: .25em;
-        font-weight: bold;
-        font-style: italic;
-    }
+	em {
+		color: $lime;
+		display: block;
+		margin-top: .25em;
+		font-weight: bold;
+		font-style: italic;
+	}
+}
+
+
+.faq {
+
+	h5 {
+		color: $fern;
+		margin-top: 2em;
+	}
+
 }
 
 
@@ -343,45 +353,45 @@ header {
    column-count:         5;
    column-gap:           20px;
 
-    @media (max-width: 1200px) {
-        -moz-column-count:    4;
-        -webkit-column-count: 4;
-        column-count:         4;
-    }
+	@media (max-width: 1200px) {
+		-moz-column-count:    4;
+		-webkit-column-count: 4;
+		column-count:         4;
+	}
 
-    @media (max-width: 1000px) {
-        -moz-column-count:    3;
-        -webkit-column-count: 3;
-        column-count:         3;
-    }
+	@media (max-width: 1000px) {
+		-moz-column-count:    3;
+		-webkit-column-count: 3;
+		column-count:         3;
+	}
 
-    @media (max-width: 800px) {
-        -moz-column-count:    2;
-        -webkit-column-count: 2;
-        column-count:         2;
-    }
-    @media (max-width: 400px) {
-        -moz-column-count:    1;
-        -webkit-column-count: 1;
-        column-count:         1;
-    }
+	@media (max-width: 800px) {
+		-moz-column-count:    2;
+		-webkit-column-count: 2;
+		column-count:         2;
+	}
+	@media (max-width: 400px) {
+		-moz-column-count:    1;
+		-webkit-column-count: 1;
+		column-count:         1;
+	}
 
 }
 
 
 .photo {
-    background: darken($midnight,10%);
-    margin-bottom: 20px;
+	background: darken($midnight,10%);
+	margin-bottom: 20px;
 
-    img {
-        -webkit-filter: contrast(100%) saturate(110%);
-        filter: contrast(100%) saturate(90%);
-        mix-blend-mode: screen;
-        -webkit-backface-visibility: hidden; // magic bug
+	img {
+		-webkit-filter: contrast(100%) saturate(110%);
+		filter: contrast(100%) saturate(90%);
+		mix-blend-mode: screen;
+		-webkit-backface-visibility: hidden; // magic bug
 
-        width: 100.5%; // yay subpixel rendering
-        height: auto;
-    }
+		width: 100.5%; // yay subpixel rendering
+		height: auto;
+	}
 }
 
 
@@ -389,12 +399,12 @@ header {
 // ---------------------------------------------------------------------- //
 
 .about-us-callout {
-    color: $thesteps;
-    font-size: 180%;
-    font-style: italic;
+	color: $thesteps;
+	font-size: 180%;
+	font-style: italic;
 }
 
 .engagement-photo img {
-    max-width: 100%;
-    margin: 2em 0 1em;
+	max-width: 100%;
+	margin: 2em 0 1em;
 }
