@@ -52,7 +52,7 @@ app.post('/rsvp', function (req, res) {
   mailOptions = {
     from: req.body.names + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
     to: 'rsvp@jeffreyandelyse.com',
-    subject: 'RSVP',
+    subject: 'RSVP from ' + req.body.names,
     text: req.body.names + '\n' + req.body.email + '\n' + req.body.coming + '\n' + req.body.comments
   };
 
