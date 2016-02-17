@@ -53,7 +53,7 @@ app.post('/rsvp', function (req, res) {
     from: req.body.names + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
     to: 'rsvp@jeffreyandelyse.com',
     subject: 'RSVP from ' + req.body.names,
-    text: req.body.names + '\n' + req.body.email + '\n' + req.body.coming + '\n' + req.body.comments
+    text: req.body.names + '\n' + req.body.coming + '\n' + req.body.comments
   };
 
   smtpTransport.sendMail(mailOptions, function (error, response) {
