@@ -34,36 +34,4 @@ app.get('/', function(req, res) {
   res.render('index', { title: 'Jeffrey and Elyse' });
 });
 
-app.get('/rsvp', function(req, res) {
-  res.render('rsvp', { title: 'RSVP to Jeffrey and Elyse' });
-});
-
-app.post('/rsvp', function (req, res) {
-  var mailOptions, smtpTransport;
-
-  smtpTransport = nodemailer.createTransport('SMTP', {
-    service: 'gmail',
-    auth: {
-      user: 'jcherewaty@gmail.com',
-      pass: 'gnylocncmrdhmzsa'
-    }
-  });
-
-  mailOptions = {
-    from: req.body.names + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
-    to: 'rsvp@jeffreyandelyse.com',
-    subject: 'RSVP from ' + req.body.names,
-    text: req.body.names + '\n' + req.body.coming + '\n' + req.body.comments
-  };
-
-  smtpTransport.sendMail(mailOptions, function (error, response) {
-    if (error) {
-      res.render('rsvp', { title: 'RSVP to Jeffrey and Elyse', message: 'Error occured, RSVP not sent.', error: true, page: 'rsvp' })
-    }
-    else {
-      res.render('rsvp-success', { title: 'RSVP Sent' })
-    }
-  });
-});
-
 module.exports = app;
